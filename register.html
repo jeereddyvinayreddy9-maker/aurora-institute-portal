@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Register | Aurora Institute</title>
+<link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/layout.css">
+<script src="js/theme.js" defer></script>
+<script src="js/validation.js" defer></script></head><body>
+<header class="site-header"><div class="container">
+  <a class="logo" href="index.html">Aurora<span>Institute</span></a>
+  <ul id="menu">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="index.html#years">Years</a></li>
+    <li><a href="index.html#parents">For Parents</a></li>
+    <li><a href="register.html" class="active">Register</a></li>
+    <li><a href="signup.html" >Sign up</a></li>
+    <li><a href="signin.html" >Sign in</a></li>
+    <li><a href="home.html" >Dashboard</a></li>
+  </ul>
+  <button class="icon-btn" id="themeToggle" aria-label="Toggle light or dark mode">🌙</button>
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</div></header>
+<div class="form-wrap card"><h1>Register</h1><p>Fill every field. The button unlocks when all are valid.</p><div id="alert" class="alert" role="alert"></div><p class="sample demo-note">Demo project: forms demonstrate front-end validation only. Connect a secure backend before using real accounts or personal information.</p>
+<form id="regForm" data-next="signin.html" novalidate>
+<div class="field"><label for="fullName">Full name</label><input id="fullName" name="fullName" type="text" data-rule="name" autocomplete="name"><span class="error-msg"></span></div>
+<div class="field"><label for="empId">Employee / Register ID</label><input id="empId" name="empId" type="text" data-rule="empId" maxlength="12"><span class="error-msg"></span></div>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" data-rule="email" autocomplete="email"><span class="error-msg"></span></div>
+<div class="field"><label for="mobile">Mobile number</label><input id="mobile" name="mobile" type="tel" data-rule="mobile" maxlength="10"><span class="error-msg"></span></div>
+<div class="field"><label for="year">Year of study</label><select id="year" name="year" data-rule="year"><option value="">Select year</option><option value="1">1st year</option><option value="2">2nd year</option><option value="3">3rd year</option><option value="4">4th year</option></select><span class="error-msg"></span></div>
+<div class="field"><label for="dept">Division</label><select id="dept" name="dept" data-rule="dept"><option value="">Select division</option><option>CSE</option><option>ECE</option><option>Biotechnology</option><option>Mechanical</option><option>Civil</option></select><span class="error-msg"></span></div>
+<div class="field"><label for="password">Password</label><input id="password" name="password" type="password" data-rule="password" autocomplete="new-password"><span class="error-msg"></span></div>
+<div class="field"><label for="confirm">Confirm password</label><input id="confirm" name="confirm" type="password" data-rule="confirm" ><span class="error-msg"></span></div>
+<button class="btn" type="submit" disabled>Register</button></form></div>
+<footer><div class="container">Aurora Institute of Technology and Sciences · A sample institution created for the 25CS208 Web Technology micro project</div></footer></body></html>

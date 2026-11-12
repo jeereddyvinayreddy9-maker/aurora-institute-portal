@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dashboard | Aurora Institute</title>
+<link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/layout.css"><link rel="stylesheet" href="css/years.css">
+<script src="js/theme.js" defer></script>
+<script src="js/calculator.js" defer></script><script src="js/planner.js" defer></script><script src="js/profile.js" defer></script><script src="js/years.js" defer></script><script src="js/chatbot.js" defer></script></head><body>
+<header class="site-header"><div class="container">
+  <a class="logo" href="index.html">Aurora<span>Institute</span></a>
+  <ul id="menu">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="index.html#years">Years</a></li>
+    <li><a href="index.html#parents">For Parents</a></li>
+    <li><a href="register.html" >Register</a></li>
+    <li><a href="signup.html" >Sign up</a></li>
+    <li><a href="signin.html" >Sign in</a></li>
+    <li><a href="home.html" class="active">Dashboard</a></li>
+  </ul>
+  <button class="icon-btn" id="themeToggle" aria-label="Toggle light or dark mode">🌙</button>
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</div></header>
+<div class="container dashboard">
+<aside><div class="card"><h3>Quick links</h3><ul class="side-list links"><li><a href="#yearCard">Year explorer</a></li><li><a href="#subjects">Subject attendance</a></li><li><a href="#roadmap">Year roadmap</a></li><li><a href="#gpa">SGPA calculator</a></li><li><a href="#planner">Attendance planner</a></li><li><a href="#calculator">Calculator</a></li><li><a href="index.html#departments">Departments</a></li><li><a href="index.html#parents">For parents</a></li><li><a href="index.html#contact">Contact</a></li></ul></div></aside>
+<main><img class="banner-img" src="img/hero-campus.svg" alt="Aurora campus">
+<div class="card"><h2>Welcome, <span id="uName">Student</span></h2><p id="uInfo">Register on the Register page to see your own details here.</p></div>
+<div class="stat-row"><div class="card"><b id="stYear">1st</b><span id="stSem">Year, odd semester</span></div><div class="card"><b id="stReg">&ndash;</b>Register ID</div><div class="card"><b id="stAtt">&ndash;</b>Attendance (overall)</div></div>
+<div class="card" id="yearCard"><h2 id="yearTitle">Year 1</h2><p id="yearDesc" class="sub"></p>
+<div class="yearbar"><div class="tabs" id="yearTabs" role="tablist" aria-label="Choose year"><button class="tab" data-y="1">Year 1</button><button class="tab" data-y="2">Year 2</button><button class="tab" data-y="3">Year 3</button><button class="tab" data-y="4">Year 4</button></div>
+<div class="tabs" id="termTabs" aria-label="Choose semester"><button class="tab" data-t="odd">Odd sem</button><button class="tab" data-t="even">Even sem</button></div>
+<label class="sample" for="deptSel" style="margin:0">Department <select id="deptSel"></select></label></div></div>
+<div id="yearBody">
+<div class="card" id="subjects"><h3>Subjects and attendance</h3><p class="hint" id="overall"></p><div id="subjList"></div><div class="row-end"><span class="sample">Green 75%+, orange 65–74%, red below 65%</span><button type="button" class="btn ghost small" id="resetAtt">Reset this semester</button></div></div>
+<div class="card" id="roadmap"><h3>Year roadmap</h3><ul class="ms" id="msList"></ul><div class="pbar"><i id="msBar"></i></div><p class="hint" id="msText"></p></div>
+<div class="card" id="gpa"><h3>SGPA calculator · <span id="gpaSems"></span></h3><div id="gpaList"></div><div class="row-end"><div><div class="sgpa" id="sgpa">–</div><small class="sample">Your SGPA</small></div><p class="hint" id="gpaMsg" style="max-width:32ch;margin:0"></p></div></div>
+</div>
+<div class="card" id="planner"><h2>Attendance safe-bunk planner</h2>
+<p>Enter your attendance to see how many classes you can miss, or must attend, to stay above your target.</p>
+<form id="plannerForm" novalidate>
+<div class="field"><label for="attended">Classes attended</label><input id="attended" type="number" min="0" step="1" value="30"></div>
+<div class="field"><label for="total">Total classes held</label><input id="total" type="number" min="1" step="1" value="40"></div>
+<div class="field"><label for="target">Target attendance (%)</label><input id="target" type="number" min="1" max="99" step="1" value="75"></div>
+<button class="btn" type="submit">Calculate</button></form>
+<div id="plannerResult" class="alert" role="status"></div></div>
+<div class="card calc" id="calculator"><h3>Calculator</h3><div id="calcDisplay">0</div><div class="keys" id="keys"></div></div></main>
+<aside><div class="card"><h3>Coming up</h3><ul class="side-list" id="events"><li>Orientation week</li></ul><p class="sample">Sample events</p></div>
+<div class="card"><h3>Contact</h3><p>Aurora Hills, Sample City – 600 000</p><p>Phone: 1800 000 0000</p></div></aside></div>
+<footer><div class="container">Aurora Institute of Technology and Sciences · A sample institution created for the 25CS208 Web Technology micro project</div></footer></body></html>

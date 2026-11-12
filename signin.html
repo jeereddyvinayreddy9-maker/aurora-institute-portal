@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Sign in | Aurora Institute</title>
+<link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/layout.css">
+<script src="js/theme.js" defer></script>
+<script src="js/validation.js" defer></script></head><body>
+<header class="site-header"><div class="container">
+  <a class="logo" href="index.html">Aurora<span>Institute</span></a>
+  <ul id="menu">
+    <li><a href="index.html" >Home</a></li>
+    <li><a href="index.html#years">Years</a></li>
+    <li><a href="index.html#parents">For Parents</a></li>
+    <li><a href="register.html" >Register</a></li>
+    <li><a href="signup.html" >Sign up</a></li>
+    <li><a href="signin.html" class="active">Sign in</a></li>
+    <li><a href="home.html" >Dashboard</a></li>
+  </ul>
+  <button class="icon-btn" id="themeToggle" aria-label="Toggle light or dark mode">🌙</button>
+  <button class="icon-btn" id="menuBtn" aria-label="Open menu">☰</button>
+</div></header>
+<div class="form-wrap card"><h1>Sign in</h1><div id="alert" class="alert" role="alert"></div><p class="sample demo-note">Demo project: forms demonstrate front-end validation only. Connect a secure backend before using real accounts or personal information.</p><form data-keep data-next="home.html" novalidate>
+<div class="field"><label for="email">Email address</label><input id="email" name="email" type="email" data-rule="email" ><span class="error-msg"></span></div>
+<div class="field"><label for="password">Password</label><input id="password" type="password" data-rule="loginpass"><button type="button" class="eye" data-target="password" aria-label="Show or hide password">👁</button><span class="error-msg"></span></div>
+<div class="field"><label for="role">I am a</label><select id="role"><option value="student">Student</option><option value="parent">Parent</option></select></div>
+<button class="btn" type="submit">Sign in</button></form><p>New here? <a href="signup.html">Sign up</a></p></div>
+<footer><div class="container">Aurora Institute of Technology and Sciences · A sample institution created for the 25CS208 Web Technology micro project</div></footer></body></html>
